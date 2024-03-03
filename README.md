@@ -6,5 +6,6 @@ Understanding the spread of an infection will help in planning efficient rules a
 ## Methodology and Implementation
 ### GIS Data
 GIS data is collected using Open Street Map and GQIS tools. A Vector Polygon dataset represents the boundary of the campus. Vector point data is used to represent different locations like student hostels, mess and classrooms. (mention datasets and ssources for data).
+### Model
 
 (readme will be updated)
