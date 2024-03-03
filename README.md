@@ -26,4 +26,6 @@ Students who don't have a class in the current hour and day go to a default loca
 
 Platform: The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations with varying number of vehicles and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
 
+Parameters: distnace scale down0.023
+
 (readme will be updated)
