@@ -24,7 +24,8 @@ For each filtered unique id: each unique id represents a particular lecture. We 
 
 Students who don't have a class in the current hour and day go to a default location (eg. hostel). 
 
-Platform: The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations with varying number of vehicles and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
+### Software 
+The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
 
 #### Parameters: 
 
@@ -33,7 +34,7 @@ Platform: The model is developed using NetLogo 6.2.0 with GIS extension (version
 |Distance scale-down para.| 0.02|
 |1 tick| 1 hour|
 |Duration|28 days|
-|Population| 630|
+|Population|630|
 |Radius of exposure| 0.04 (~2m)|
 |Incubation Period|4 days|
 |Illness Period|10 days|
