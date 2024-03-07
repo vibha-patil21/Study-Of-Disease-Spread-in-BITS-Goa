@@ -43,6 +43,10 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 |Chances of recovery|80%|
 |Chances of death|1%|
 
+### Code Architecture
+<img width="760" alt="Diagram" src="https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/9d8133f6-f2ef-4aa6-929a-d0e2e20bd097">
+
+
 ## Results (plots)
 ## Conclusion
 (readme will be updated)
