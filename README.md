@@ -2,7 +2,9 @@
 Using agent-based simulations to understand how an infection spreads in a college campus
 ## Problem Statement
 Understanding the spread of an infection will help in planning efficient rules and regulations for managing and preventing outbreak and provide insight into predicting the future of the outbreaks.
-(aims: to be added)
+
+AIM: To test effectiveness of restrictions to see if they can prevent ourbreak. (hostel zones, batches, quarantine and subsequent delay or decrease in infection surge).
+  Measure cummulative percentage of infections and percentage of active infections over a 28 day period. 
 ## Methodology and Implementation
 ### GIS Data
 GIS data is collected using Open Street Map and GQIS tools. A Vector Polygon dataset represents the boundary of the campus. Vector point data is used to represent different locations like student hostels, mess and classrooms. 
@@ -23,6 +25,8 @@ For each day and hour in the simulation, filter rows in merged_timetable.csv con
 For each filtered unique id: each unique id represents a particular lecture. We can get location of the lecture using the row of the unique id. Using Student.csv, locations of all students who have the filtered unique_ids mentioned are updated according to the corresponding lecture location. This ensures students attend classes according to their lectures.
 
 Students who don't have a class in the current hour and day go to a default location (eg. hostel). 
+
+
 
 ### Software 
 The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
@@ -48,5 +52,11 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 
 
 ## Results (plots)
+### Percentage of Cumulative Infections 
+![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/7c2aa39c-718d-4209-bead-ee4e62ee07c7)
+
+### Percentage of Active Infections
+![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/d6fa29b7-5b07-47d7-a313-3ac52efcaf58)
+
 ## Conclusion
 (readme will be updated)
