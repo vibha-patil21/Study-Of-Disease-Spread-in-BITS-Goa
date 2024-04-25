@@ -25,14 +25,14 @@ The model contains switches called classroom, mess-switch, quarantine, class-bat
 1. classroom switch:
 For each day and hour in the simulation, filter rows in merged_timetable.csv containing the current hour and day. The unique IDs of these rows represent lectures during that hour.
 For each filtered unique id: each unique id represents a particular lecture. We can get the location of the lecture using the row of the unique ID. Using Student.csv, the locations of all students who have the filtered unique_ids mentioned are updated according to the corresponding lecture location. This ensures students attend classes according to their lectures.
-
 Students who don't have a class at the current hour and day go to a default location (e.g. a hostel). 
 
-2. mess-switch one of the messes 3 times a day during fixed hours. Each mess hour is divided into 4 slots. Students are allotted one of the slots randomly. For each slot, students with that slot go to mess and take random positions.
+2. mess-switch: Students go to one of the messes 3 times a day during fixed hours. Each mess hour is divided into 4 slots. Students are allotted one of the slots randomly. For each slot, students with that slot go to mess and take random positions. Infected students expose students to the disease. At the end of their slots, students go back to hostel.
 
-3. class-batches switch
-4. mess-batches switch
-5. quarantine switch
+3. class-batches switch: Students with even IDs are allotted class-batch 0, and those with odd IDs are allotted class-batch 1. When the class-batches switch is on, students with class-batch 0 go to class on even days, and others go on odd days. This reduces the strength of students attending classes to 50%. For each classroom, if the number of students in the classroom per unit area exceeds a limit (more than one), then infected students expose students to the disease.
+   
+4. mess-batches switch: Students with even IDs are allotted one of the first two slots randomly, and those with odd IDs are one of the other 2 slots randomly. Batches are used to ensure the same students interact with each other.
+5. quarantine switch: Students who become infected are quarantined immediately in a different hostel building. Hostel students do not go to mess or classes. They are under quarantine for an isolation period of 7 days.
    
 ### 2.4 Software 
 The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
@@ -46,6 +46,7 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 |Duration|28 days|
 |Population|630|
 |Radius of exposure| 0.04 (~2m)|
+|Isolation Period|7 days|
 |Incubation Period|4 days|
 |Illness Period|10 days|
 |Chances of Exposure|70%|
@@ -59,10 +60,12 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 
 ## Results (plots)
 ### 4.1 Percentage of Cumulative Infections 
-![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/7c2aa39c-718d-4209-bead-ee4e62ee07c7)
+![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/9d3dcaa1-6034-4c8e-879d-12e85f6c2022)
+
 
 ### 4.2 Percentage of Active Infections
-![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/d6fa29b7-5b07-47d7-a313-3ac52efcaf58)
+![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/263323a9-2a5c-4c16-91ed-5d01059e5b02)
+
 
 ## Conclusion
 (readme will be updated)
