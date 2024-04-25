@@ -16,7 +16,7 @@ Different datasets contain details of students and class locations stored as CSV
 
 ID.csv: List of Students, their hostel, batch and branches.
 
-merged_timetable.csv: Acts as a master timetable. It contains 4 columns: unique_ID, day, hour and location. Used to store details of all lectures according to the day of the week, hour of the day and location of the lecture. Each <day, hour, location> triplet has a unique ID, which is used to reference the triplet.
+merged_timetable.csv: Acts as a master timetable. It contains 4 columns: unique_ID, day, hour and location. It is used to store details of all lectures according to the day of the week, hour of the day and location of the lecture. Each <day, hour, location> triplet has a unique ID, which is used to reference the triplet.
 
 Student.csv: It contains 2 columns, student_id and unique_id. This CSV contains unique_ids of all lectures for each student in the simulation.
 
@@ -27,12 +27,12 @@ For each day and hour in the simulation, filter rows in merged_timetable.csv con
 For each filtered unique id: each unique id represents a particular lecture. We can get the location of the lecture using the row of the unique ID. Using Student.csv, the locations of all students who have the filtered unique_ids mentioned are updated according to the corresponding lecture location. This ensures students attend classes according to their lectures.
 Students who don't have a class at the current hour and day go to a default location (e.g. a hostel). 
 
-2. mess-switch: Students go to one of the messes 3 times a day during fixed hours. Each mess hour is divided into 4 slots. Students are allotted one of the slots randomly. For each slot, students with that slot go to mess and take random positions. Infected students expose students to the disease. At the end of their slots, students go back to hostel.
+2. mess-switch: Students go to one of the messes 3 times a day during fixed hours. Each mess hour is divided into 4 slots. Students are allotted one of the slots randomly. For each slot, students with that slot go to mess and take random positions. Infected students expose students to the disease. At the end of their slots, students go back to their hostel.
 
 3. class-batches switch: Students with even IDs are allotted class-batch 0, and those with odd IDs are allotted class-batch 1. When the class-batches switch is on, students with class-batch 0 go to class on even days, and others go on odd days. This reduces the strength of students attending classes to 50%. For each classroom, if the number of students in the classroom per unit area exceeds a limit (more than one), then infected students expose students to the disease.
    
 4. mess-batches switch: Students with even IDs are allotted one of the first two slots randomly, and those with odd IDs are one of the other 2 slots randomly. Batches are used to ensure the same students interact with each other.
-5. quarantine switch: Students who become infected are quarantined immediately in a different hostel building. Hostel students do not go to mess or classes. They are under quarantine for an isolation period of 7 days.
+5. quarantine switch: Students who become infected are quarantined immediately in a different hostel building. Quarantined students do not go to mess or classes. They are under quarantine for an isolation period of 7 days.
    
 ### 2.4 Software 
 The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). The BehaviorSpace tool in NetLogo is used to run experiments. Each experiment runs multiple simulations and generates CSV files containing results for each simulation. Python (Matplotlib library) is used to analyse data and visualise results.
@@ -60,11 +60,10 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 
 ## Results (plots)
 ### 4.1 Percentage of Cumulative Infections 
-![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/9d3dcaa1-6034-4c8e-879d-12e85f6c2022)
-
+![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/f10fd86f-913a-4726-a342-a728ae75dfa9)
 
 ### 4.2 Percentage of Active Infections
-![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/263323a9-2a5c-4c16-91ed-5d01059e5b02)
+![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/c62410ad-e20a-4fd9-a9fe-fafbd2d92058)
 
 
 ## Conclusion
