@@ -55,8 +55,8 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 |Chances of death|1%|
 
 ### Code Architecture
-<img width="760" alt="Diagram" src="https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/9d8133f6-f2ef-4aa6-929a-d0e2e20bd097" >
-
+<img width="758" alt="code architecture" src="https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/573a61b1-4e7e-4720-9960-13de66dcd4de">
+Figure1: Code architecture
 
 ## Results
 In the figures below:
