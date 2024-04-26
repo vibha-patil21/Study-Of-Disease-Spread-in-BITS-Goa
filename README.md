@@ -58,13 +58,17 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 <img width="760" alt="Diagram" src="https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/9d8133f6-f2ef-4aa6-929a-d0e2e20bd097" >
 
 
-## Results (plots)
+## Results
+'free' refers to simulations run without any restrictions, quarantine or zones. (classroom, mess-switch -ON, class-batches,mess-batches, quarantine- OFF, no zones in hostel)
+'free+Q' refers to simulations run with quarantine without any restrictions or zones. (classroom, mess-switch, quarantine -ON, class-batches,mess-batches- OFF, no zones in hostel)
+'restricted' refers to simulations run with restrictions and zones without quarantine. (classroom, mess-switch, class-batches, mess-batches-ON, quarantine- OFF, zones in hostel)
+'restricted+Q' refers to simulations run with restrictions, zones, and quarantine. (classroom, mess-switch, class-batches, mess-batches, quarantine-ON, zones in hostel)
 ### 4.1 Percentage of Cumulative Infections 
 ![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/f10fd86f-913a-4726-a342-a728ae75dfa9)
 
 ### 4.2 Percentage of Active Infections
-![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/c62410ad-e20a-4fd9-a9fe-fafbd2d92058)
+![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/ded6645b-ef5e-4d31-acd9-b35af8486c35)
 
-
+### 4.3 Recoveries
 ## Conclusion
 (readme will be updated)
