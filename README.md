@@ -2,7 +2,7 @@
 Using agent-based simulations to understand how an infection spreads on a college campus
 ## Problem Statement
 Understanding the spread of infection will help in planning efficient rules and regulations for managing and preventing outbreaks and provide insight into predicting the future of the outbreaks. To that end, the aims of the simulation study are as follows. 
-1. Measure the percentage of cumulative infections and active infections over a period of 28 days.
+1. Measure the percentage of cumulative infections and active infections for 28 days.
 2. Test the effectiveness of restrictions like quarantines, classroom and mess batches and hostel zones to see if they can prevent an outbreak by decreasing or delaying a surge in infections 
 ## Methodology and Implementation
 ### 2.1 GIS Data
@@ -24,12 +24,12 @@ Student.csv: It contains 2 columns, student_id and unique_id. This CSV contains 
 The model contains switches called classroom, mess-switch, quarantine, class-batches and mess-batches. These switches are used in combination to simulate different conditions. (e.g., if the classroom switch is on, students go to classrooms according to their timetable; otherwise, they do not.)
 1. classroom switch:
 For each day and hour in the simulation, filter rows in merged_timetable.csv containing the current hour and day. The unique IDs of these rows represent lectures during that hour.
-For each filtered unique id: each unique id represents a particular lecture. We can get the location of the lecture using the row of the unique ID. Using Student.csv, the locations of all students who have the filtered unique_ids mentioned are updated according to the corresponding lecture location. This ensures students attend classes according to their lectures.
+For each filtered unique id: each unique id represents a particular lecture. We can get the location of the lecture using the row of the unique ID. Using Student.csv, the locations of all students who have the filtered unique_ids mentioned are updated according to the corresponding lecture location, which ensures students attend classes according to their lectures.
 Students who don't have a class at the current hour and day go to a default location (e.g. a hostel). 
 
 2. mess-switch: Students go to one of the messes 3 times a day during fixed hours. Each mess hour is divided into 4 slots. Students are allotted one of the slots randomly. For each slot, students with that slot go to mess and take random positions. Infected students expose students to the disease. At the end of their slots, students go back to their hostel.
 
-3. class-batches switch: Students with even IDs are allotted class-batch 0, and those with odd IDs are allotted class-batch 1. When the class-batches switch is on, students with class-batch 0 go to class on even days, and others go on odd days. This reduces the strength of students attending classes to 50%. For each classroom, if the number of students in the classroom per unit area exceeds a limit (more than one), then infected students expose students to the disease.
+3. class-batches switch: Students with even IDs are allotted class-batch 0, and those with odd IDs are allotted class-batch 1. When the class-batches switch is on, students with class-batch 0 go to class on even days, and others go on odd days, which reduces the strength of students attending classes to 50%. For each classroom, if the number of students in the classroom per unit area exceeds a limit (more than one), then infected students expose students to the disease.
    
 4. mess-batches switch: Students with even IDs are allotted one of the first two slots randomly, and those with odd IDs are one of the other 2 slots randomly. Batches are used to ensure the same students interact with each other.
 5. quarantine switch: Students who become infected are quarantined immediately in a different hostel building. Quarantined students do not go to mess or classes. They are under quarantine for an isolation period of 7 days.
@@ -59,15 +59,24 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 
 
 ## Results
+In the figures below:
 'free' refers to simulations run without any restrictions, quarantine or zones. (classroom, mess-switch -ON, class-batches,mess-batches, quarantine- OFF, no zones in hostel)
 'free+Q' refers to simulations run with quarantine without any restrictions or zones. (classroom, mess-switch, quarantine -ON, class-batches,mess-batches- OFF, no zones in hostel)
 'restricted' refers to simulations run with restrictions and zones without quarantine. (classroom, mess-switch, class-batches, mess-batches-ON, quarantine- OFF, zones in hostel)
 'restricted+Q' refers to simulations run with restrictions, zones, and quarantine. (classroom, mess-switch, class-batches, mess-batches, quarantine-ON, zones in hostel)
 ### 4.1 Percentage of Cumulative Infections 
 ![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/f10fd86f-913a-4726-a342-a728ae75dfa9)
+Figure 2: Percentage of cumulative infections among students for 28 days with a combination of free and restricted movement with quarantine.
+
+The figure shows the maximum percentage of cumulative infections to be 100% for free movement. It reduces to 96.34% for restricted movement and to 95.5% for free movement with quarantine. The lowest percentage of infections is 45% for restricted movement with quarantine, which suggests quarantine with restricted movement is the best method to contain infections.
+
+Comparing the number of days taken for the percentage of infections to cross 80%, it takes 9 days for free movement, 14 days for restricted movement and 23 days for free movement with quarantine, which suggests that restrictions and quarantine help delay a sudden increase in infections.
 
 ### 4.2 Percentage of Active Infections
 ![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/ded6645b-ef5e-4d31-acd9-b35af8486c35)
+Figure 3: Percentage of active infections among students for 28 days with a combination of free and restricted movement with quarantine.
+
+The figure shows that the percentage of active infections peaks at 99% on the 14th day for free movement. The percentage reduces to 81% on the 15th day for restricted movement. The maximum percentage of active infections is 66% on the 28th day for free movement with quarantine and 36.6% for restricted movement with quarantine, which suggests quarantine is the best method to delay the peak in infections.
 
 ### 4.3 Recoveries
 ## Conclusion
