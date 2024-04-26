@@ -78,6 +78,6 @@ Figure 3: Percentage of active infections among students for 28 days with a comb
 
 The figure shows that the percentage of active infections peaks at 99% on the 14th day for free movement. The percentage reduces to 81% on the 15th day for restricted movement. The maximum percentage of active infections is 66% on the 28th day for free movement with quarantine and 36.6% for restricted movement with quarantine, which suggests quarantine is the best method to delay the peak in infections.
 
-### 4.3 Recoveries
 ## Conclusion
-(readme will be updated)
+The results show that using restrictions like hostel zones, class and mess batches helps delay the sudden increase in infections, which gives crucial time to healthcare providers to prepare for the surge in infections. The results also show that quarantine is effective in containing the spread of diseases, which prevents the straining of healthcare services. The combination of restrictions and quarantine is the best method for preventing an outbreak.
+
