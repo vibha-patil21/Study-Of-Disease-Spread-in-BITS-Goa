@@ -55,7 +55,8 @@ The model is developed using NetLogo 6.2.0 with GIS extension (version 1.1.2). T
 |Chances of death|1%|
 
 ### Code Architecture
-<img width="758" alt="code architecture" src="https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/573a61b1-4e7e-4720-9960-13de66dcd4de">
+<img width="764" alt="codearch" src="https://github.com/user-attachments/assets/04ac7b88-4d2f-4f66-ae87-9d1e40ddee6e">
+
 Figure1: Code architecture
 
 ## Results
@@ -65,7 +66,8 @@ In the figures below:
 'restricted' refers to simulations run with restrictions and zones without quarantine. (classroom, mess-switch, class-batches, mess-batches-ON, quarantine- OFF, zones in hostel)
 'restricted+Q' refers to simulations run with restrictions, zones, and quarantine. (classroom, mess-switch, class-batches, mess-batches, quarantine-ON, zones in hostel)
 ### 4.1 Percentage of Cumulative Infections 
-![cummInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/f10fd86f-913a-4726-a342-a728ae75dfa9)
+<img width="595" alt="curr_infections" src="https://github.com/user-attachments/assets/6f7847f9-1282-4953-b63b-0a311e5f121c">
+
 Figure 2: Percentage of cumulative infections among students for 28 days with a combination of free and restricted movement with quarantine.
 
 The figure shows the maximum percentage of cumulative infections to be 100% for free movement. It reduces to 96.34% for restricted movement and to 95.5% for free movement with quarantine. The lowest percentage of infections is 45% for restricted movement with quarantine, which suggests quarantine with restricted movement is the best method to contain infections.
@@ -73,7 +75,8 @@ The figure shows the maximum percentage of cumulative infections to be 100% for 
 Comparing the number of days taken for the percentage of infections to cross 80%, it takes 9 days for free movement, 14 days for restricted movement and 23 days for free movement with quarantine, which suggests that restrictions and quarantine help delay a sudden increase in infections.
 
 ### 4.2 Percentage of Active Infections
-![currInfections vs days](https://github.com/vibha-patil21/Study-Of-Disease-Spread-in-BITS-Goa/assets/98578612/ded6645b-ef5e-4d31-acd9-b35af8486c35)
+<img width="595" alt="curr_infections" src="https://github.com/user-attachments/assets/64625414-c45a-4af6-ace5-40a32f2c7c3a">
+
 Figure 3: Percentage of active infections among students for 28 days with a combination of free and restricted movement with quarantine.
 
 The figure shows that the percentage of active infections peaks at 99% on the 14th day for free movement. The percentage reduces to 81% on the 15th day for restricted movement. The maximum percentage of active infections is 66% on the 28th day for free movement with quarantine and 36.6% for restricted movement with quarantine, which suggests quarantine is the best method to decrease the surge in infections.
